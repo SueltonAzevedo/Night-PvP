@@ -1,0 +1,5 @@
+name: SusuNightPvP
+version: '${project.version}'
+main: me.susu.susunightpvp.SusuNightPvP
+api-version: 1.13
+authors: [ Susu ]

@@ -1,0 +1,36 @@
+# Este plugin foi feito por
+#   ________ __  ________ __
+#  /  ___/  |  \/  ___/  |  \
+#  \___ \|  |  /\___ \|  |  /
+# /____  >____//____  >____/
+#      \/           \/
+# discord.gg/MFqnjEZqs5
+
+pvp-worlds:
+  - "world"
+  - "world_nether"
+  - "world_the_end"
+
+# Para desabilitar deixe as aspas vazias
+action-bar: "&cVocê não pode ferir jogadores durante o dia"
+
+dia:
+  hora: 1000
+  dificuldade: NORMAL
+  # Para desabilitar deixe as aspas vazias
+  title: "&eDia"
+  # Para desabilitar deixe as aspas vazias
+  subtitle: "&aPvP desabilitado"
+
+  # Para desabilitar deixe o volume em 0
+  som: entity_chicken_ambient
+  volume: 1
+
+noite:
+  hora: 13000
+  dificuldade: HARD
+  title: "&8Noite"
+  subtitle: "&cPvP habilitado"
+
+  som: entity_bat_ambient
+  volume: 1
