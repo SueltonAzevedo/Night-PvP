@@ -24,8 +24,8 @@ public class ConfigManager {
     public static int volumeSomNoite;
 
     public static void loadConfig() {
-        horaDia = config.getInt("dia.hora");
-        horaNoite = config.getInt("noite.hora");
+        horaDia = config.getInt("dia.hora") + 20;
+        horaNoite = config.getInt("noite.hora") + 20;
         pvpNaoPode = Objects.requireNonNull(config.getString("action-bar")).replace('&', '§');
         titleDia = Objects.requireNonNull(config.getString("dia.title")).replace('&', '§');
         subtitleDia = Objects.requireNonNull(config.getString("dia.subtitle")).replace('&', '§');
