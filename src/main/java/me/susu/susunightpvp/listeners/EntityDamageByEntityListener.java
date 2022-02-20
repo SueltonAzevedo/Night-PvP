@@ -1,4 +1,4 @@
-package me.susu.susunightpvp.events;
+package me.susu.susunightpvp.listeners;
 
 import me.susu.susunightpvp.SusuNightPvP;
 import me.susu.susunightpvp.settings.ConfigManager;

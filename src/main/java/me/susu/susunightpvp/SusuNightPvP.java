@@ -1,7 +1,7 @@
 package me.susu.susunightpvp;
 
 import com.google.common.base.Stopwatch;
-import me.susu.susunightpvp.events.EntityDamageByEntityListener;
+import me.susu.susunightpvp.listeners.EntityDamageByEntityListener;
 import me.susu.susunightpvp.settings.ConfigManager;
 import me.susu.susunightpvp.task.TimeChangeTask;
 import org.bukkit.Bukkit;
