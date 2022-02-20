@@ -36,7 +36,7 @@ public final class SusuNightPvP extends JavaPlugin {
 
         TimeChangeTask.timeChangeTask();
 
-        checarHorario();
+        checkTime();
 
         sendMessage("&f[SusuNightPvP] Este plugin foi feito por");
         sendMessage("&b[SusuNightPvP]   ________ __  ________ __ ");
@@ -53,7 +53,7 @@ public final class SusuNightPvP extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage(message.replace('&', '§'));
     }
 
-    public static boolean isDeDia(String worldName) {
+    public static boolean isCurrentlyDay(String worldName) {
         long time = Objects.requireNonNull(SusuNightPvP.getPlugin().getServer().getWorld(worldName)).getTime();
 
         return time > ConfigManager.horaDia && time < ConfigManager.horaNoite;
@@ -64,9 +64,9 @@ public final class SusuNightPvP extends JavaPlugin {
         pm.registerEvents(new EntityDamageByEntityListener(), this);
     }
 
-    public void checarHorario() {
+    public void checkTime() {
         for (String worldName : getConfig().getStringList("pvp-worlds")) {
-            if (isDeDia(worldName)) {
+            if (isCurrentlyDay(worldName)) {
                 Objects.requireNonNull(Bukkit.getWorld(worldName)).setDifficulty(Difficulty.valueOf(getConfig().getString("dia.dificuldade")));
             } else {
                 Objects.requireNonNull(Bukkit.getWorld(worldName)).setDifficulty(Difficulty.valueOf(getConfig().getString("noite.dificuldade")));

@@ -16,11 +16,9 @@ public class EntityDamageByEntityListener implements Listener {
         if (!(e.getDamager() instanceof Player) || !(e.getEntity() instanceof Player)) {
             return;
         }
-
         Player p = (Player) e.getDamager();
-
         for (String worldName : SusuNightPvP.getPlugin().getConfig().getStringList("pvp-worlds")) {
-            if (p.getWorld().getName().equals(worldName) && SusuNightPvP.isDeDia(p.getWorld().getName())) {
+            if (p.getWorld().getName().equals(worldName) && SusuNightPvP.isCurrentlyDay(p.getWorld().getName())) {
                 p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(ConfigManager.pvpNaoPode));
                 e.setCancelled(true);
             }
