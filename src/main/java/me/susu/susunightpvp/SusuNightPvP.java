@@ -21,7 +21,6 @@ public final class SusuNightPvP extends JavaPlugin {
         Stopwatch loadTime = Stopwatch.createStarted();
 
         saveDefaultConfig();
-        ConfigManager.loadConfig();
 
         for (String mundo : getConfig().getStringList("pvp-worlds")) {
             if (Bukkit.getWorld(mundo) == null) {
@@ -32,10 +31,9 @@ public final class SusuNightPvP extends JavaPlugin {
             }
         }
 
+        ConfigManager.loadConfig();
         registerEvents();
-
         TimeChangeTask.timeChangeTask();
-
         checkTime();
 
         sendMessage("&f[SusuNightPvP] Este plugin foi feito por");
